@@ -1,0 +1,26 @@
+about:
+  home: 'http://enews.patricbrc.org/fastortho/'
+  license: GPLv3
+  summary: ''
+
+build:
+  number: 1
+  skip: True # [osx]
+
+requirements:
+  build:
+    - gcc 
+  run:
+    - libgcc
+    - blast
+    - mcl
+package:
+  name: fastortho
+  version: '1'
+source:
+  url: http://brcdownloads.patricbrc.org/patric2/software/FastOrtho/FastOrtho.zip
+  fn: FastOrtho.zip
+  sha256: f7e2a5fd5a137719ca3e704f17cf2a5bf5cc5f44443b6ec9926b34ba03732e95
+test:
+  commands:
+    - 'echo 0'
