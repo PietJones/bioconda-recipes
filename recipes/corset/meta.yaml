@@ -1,0 +1,27 @@
+about:
+  home: 'https://github.com/Oshlack/Corset'
+  license: GPLv3
+  summary: ''
+
+build:
+  number: 1
+  skip: True # [osx]
+
+requirements:
+  build:
+    - gcc 
+    - samtools ==0.1.19
+  run:
+    - libgcc
+    - samtools ==0.1.19
+package:
+  name: corset
+  version: '1.05'
+source:
+  git_url: https://github.com/Oshlack/Corset
+  #url: http://tenet.dl.sourceforge.net/project/rnaseqassembly/Bridger_r2014-12-01.tar.gz
+  #fn: Bridger_r2014-12-01.tar.gz
+  #md5: 4f4a8a00363df197463259a7eef906b2
+test:
+  commands:
+    - 'corset --help 2>&1 | grep "Usage: corset"'
